@@ -25,18 +25,18 @@
 // WS2812 and clones only need 50 µs
 //
 ///////////////////////////////////////////////////////////////////////
-#if !defined(ws2812_resettime)
+#ifndef ws2812_resettime
 #define ws2812_resettime    300
 #endif
 
 ///////////////////////////////////////////////////////////////////////
 // Define I/O pin
 ///////////////////////////////////////////////////////////////////////
-#if !defined(ws2812_port)
+#ifndef ws2812_port
 #define ws2812_port B   // Data port
 #endif
 
-#if !defined(ws2812_pin)
+#ifndef ws2812_pin
 #define ws2812_pin  2   // Data out pin
 #endif
 
@@ -83,11 +83,11 @@ void ws2812_sendarray_mask(uint8_t *array,uint16_t length, uint8_t pinmask);
 /*
  * Internal defines
  */
-#if !defined(CONCAT)
+#ifndef CONCAT
 #define CONCAT(a, b)            a ## b
 #endif
 
-#if !defined(CONCAT_EXP)
+#ifndef CONCAT_EXP
 #define CONCAT_EXP(a, b)   CONCAT(a, b)
 #endif
 
